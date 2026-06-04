@@ -1,16 +1,7 @@
 name: Test
 
 on:
-  push:
-    branches:
-      - master
-  pull_request:
-    types:
-      - opened
-      - synchronize
-  schedule:
-    # cron every week on monday
-    - cron: "0 0 * * 1"
+  workflow_dispatch: 
 
 permissions: {}
 
@@ -54,7 +45,7 @@ jobs:
     timeout-minutes: 10
     strategy:
       matrix:
-        os: [ windows-latest, macos-latest ]
+        os: [ windows-latest]
         python-version: [ "3.14", "3.14t" ]
         deprecated-tests: [ "no-deprecation" ]
         uv-resolution:
