@@ -1,13 +1,7 @@
 name: Test Redistribute
 
 on:
-  push:
-    branches:
-      - master
-  pull_request:
-    types:
-      - opened
-      - synchronize
+  workflow_dispatch: 
 
 permissions: {}
 
